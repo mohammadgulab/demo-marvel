@@ -205,8 +205,8 @@ body.menu-open{overflow:hidden}
 .foot-by{margin-top:10px;font-family:var(--cond);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
 .foot-by a{color:#ffcf6a}
 
-/* mobile scene layout */
-@media (max-width:760px){
+/* mobile scene layout (phones and portrait tablets) */
+@media (max-width:760px),(max-width:1100px) and (orientation:portrait){
  .art{left:50%;top:33%;width:min(78vw,40vh)}
  .hud{left:50%;top:33%;width:min(98vw,52vh)}.hud-tl,.hud-br{font-size:.62rem}.hud b{font-size:1.1rem}.hud-br b{font-size:.7rem}
  .reactor{left:50%;top:33%;width:min(130vw,70vh)}
@@ -240,7 +240,7 @@ body.menu-open{overflow:hidden}
 .scene{--en:clamp(0,calc(var(--a)*2.2),1)}
 .s-spidey .stage::after,.s-cap .stage::after{content:none}
 .s-strange .fx-wrap{transform:scale(calc(1 + var(--x)*var(--x)*5))}
-@media (max-width:760px){.fx-wrap{transform-origin:50% 33%}}
+@media (max-width:760px),(max-width:1100px) and (orientation:portrait){.fx-wrap{transform-origin:50% 33%}}
 
 /* spot reveal (cursor circle) */
 .reveal-spot{--mx:50%;--my:45%;--rad:0px;-webkit-mask-image:radial-gradient(circle at var(--mx) var(--my),#000 calc(var(--rad) - 2px),transparent var(--rad));mask-image:radial-gradient(circle at var(--mx) var(--my),#000 calc(var(--rad) - 2px),transparent var(--rad));opacity:clamp(0,calc((var(--r) - .9)*10),1)}
