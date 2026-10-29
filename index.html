@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marvel Universe | A fan tribute</title>
+<meta name="description" content="A fan-made cinematic tribute to Iron Man, Spider-Man, Captain America, Thor, Hulk, Black Panther and Doctor Strange. Scroll to meet them one by one.">
+<meta property="og:title" content="Marvel Universe | A fan tribute">
+<meta property="og:description" content="Seven heroes, one scroll. A fan-made cinematic demo website by Mohammad Gulab.">
+<meta property="og:image" content="https://mohammadgulab.github.io/demo-marvel/og.jpg">
+<meta name="theme-color" content="#07060a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23c8161f'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23eef1f6'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23123a8c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm');setTimeout(function(){if(!window.MU_READY)document.documentElement.classList.add('fallback')},4000);</script>
+</head>
+<body>
+<div class="cursor" aria-hidden="true"></div>
+<div class="loader" id="loader" aria-hidden="true">
+ <div class="ld-names"><span style="--c1:#ff3b30">Iron Man</span><span style="--c1:#e8202a">Spider-Man</span><span style="--c1:#2f6bff">Captain America</span><span style="--c1:#7cc4ff">Thor</span><span style="--c1:#7ddc3a">Hulk</span><span style="--c1:#b85cff">Black Panther</span><span style="--c1:#ffb03a">Doctor Strange</span></div>
+ <div class="ld-bar"><i id="ldBar"></i></div>
+ <div class="ld-row"><span>Assembling heroes</span><b id="ldPct">00</b></div>
+</div>
+
+<header class="hdr" id="hdr">
+ <a class="brand" href="#top" aria-label="Marvel Universe fan tribute, back to top"><span class="brand-mark" aria-hidden="true"></span><span>MU <em>Fan Tribute</em></span></a>
+ <nav class="dnav" aria-label="Heroes"><a href="#iron">Iron Man</a><a href="#spidey">Spider-Man</a><a href="#cap">Captain America</a><a href="#thor">Thor</a><a href="#hulk">Hulk</a><a href="#panther">Black Panther</a><a href="#strange">Doctor Strange</a></nav>
+ <a class="hdr-cta" href="#roster">Roster</a>
+ <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i><i></i></button>
+</header>
+
+<div class="mmenu" id="mmenu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+ <button class="mm-close" id="mmClose" type="button" aria-label="Close menu">Close <span aria-hidden="true">✕</span></button>
+ <p class="mm-eye">Choose your hero</p>
+ <nav class="mm-nav" aria-label="Mobile"><a href="#iron" style="--c1:#ff3b30"><span>01</span>Iron Man</a><a href="#spidey" style="--c1:#e8202a"><span>02</span>Spider-Man</a><a href="#cap" style="--c1:#2f6bff"><span>03</span>Captain America</a><a href="#thor" style="--c1:#7cc4ff"><span>04</span>Thor</a><a href="#hulk" style="--c1:#7ddc3a"><span>05</span>Hulk</a><a href="#panther" style="--c1:#b85cff"><span>06</span>Black Panther</a><a href="#strange" style="--c1:#ffb03a"><span>07</span>Doctor Strange</a><a href="#roster" style="--c1:#fff"><span>08</span>Full roster</a></nav>
+ <p class="mm-foot">Fan-made tribute demo</p>
+</div>
+
+<nav class="rail" aria-label="Scene progress"><a href="#iron" style="--c1:#ff3b30" aria-label="Iron Man"><i></i><span>Iron Man</span></a><a href="#spidey" style="--c1:#e8202a" aria-label="Spider-Man"><i></i><span>Spider-Man</span></a><a href="#cap" style="--c1:#2f6bff" aria-label="Captain America"><i></i><span>Captain America</span></a><a href="#thor" style="--c1:#7cc4ff" aria-label="Thor"><i></i><span>Thor</span></a><a href="#hulk" style="--c1:#7ddc3a" aria-label="Hulk"><i></i><span>Hulk</span></a><a href="#panther" style="--c1:#b85cff" aria-label="Black Panther"><i></i><span>Black Panther</span></a><a href="#strange" style="--c1:#ffb03a" aria-label="Doctor Strange"><i></i><span>Doctor Strange</span></a></nav>
+
+<main id="top">
+<section class="intro" aria-labelledby="intro-t">
+ <div class="stars" aria-hidden="true"></div>
+ <div class="intro-glow" aria-hidden="true"></div>
+ <p class="pill">A fan tribute</p>
+ <h1 id="intro-t" class="intro-t" aria-label="Marvel Universe"><span class="it-1" aria-hidden="true"><span class="w"><span class="l" style="--i:1">M</span><span class="l" style="--i:2">A</span><span class="l" style="--i:3">R</span><span class="l" style="--i:4">V</span><span class="l" style="--i:5">E</span><span class="l" style="--i:6">L</span></span></span><span class="it-2" aria-hidden="true"><span class="w"><span class="l" style="--i:1">U</span><span class="l" style="--i:2">N</span><span class="l" style="--i:3">I</span><span class="l" style="--i:4">V</span><span class="l" style="--i:5">E</span><span class="l" style="--i:6">R</span><span class="l" style="--i:7">S</span><span class="l" style="--i:8">E</span></span></span></h1>
+ <p class="intro-sub">Seven heroes. One scroll. Meet them one after another, each in their own scene.</p>
+ <ul class="emblems" aria-hidden="true"><li style="--c1:#ff3b30;--i:0"><svg class="art-svg" viewBox="0 0 400 410" aria-hidden="true">
+<defs>
+<linearGradient id="e0r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4a3d"/><stop offset=".45" stop-color="#c3121f"/><stop offset="1" stop-color="#5e060c"/></linearGradient>
+<linearGradient id="e0g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0a8"/><stop offset=".35" stop-color="#f2c14e"/><stop offset=".7" stop-color="#c68a1c"/><stop offset="1" stop-color="#7d5208"/></linearGradient>
+<filter id="e0gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="e0fc"><path d="M200 84 L230 70 C268 76 292 108 294 160 L292 232 C287 262 276 288 262 304 L240 338 L200 348 L160 338 L138 304 C124 288 113 262 108 232 L106 160 C108 108 132 76 170 70 Z"/></clipPath>
+</defs>
+<g class="im-shell"><path d="M200 26 C292 26 344 90 344 182 L338 262 C332 304 300 344 258 364 L200 384 L142 364 C100 344 68 304 62 262 L56 182 C56 90 108 26 200 26 Z" fill="url(#e0r)"/>
+<path d="M200 26 C150 26 104 52 82 98 C120 70 160 60 200 60 C240 60 280 70 318 98 C296 52 250 26 200 26 Z" fill="#fff" opacity=".18"/>
+<path d="M62 210 L100 222 L104 300 L80 290 Z" fill="#000" opacity=".22"/><path d="M338 210 L300 222 L296 300 L320 290 Z" fill="#000" opacity=".22"/>
+<path d="M200 384 L200 352" stroke="#3d0307" stroke-width="3"/></g>
+
+<g class="im-plate"><g class="im-pl"><path d="M200 84 L170 70 C132 76 108 108 106 160 L108 232 C113 262 124 288 138 304 L160 338 L200 348 Z" fill="url(#e0g)"/></g>
+<g class="im-pr"><path d="M200 84 L230 70 C268 76 292 108 294 160 L292 232 C287 262 276 288 262 304 L240 338 L200 348 Z" fill="url(#e0g)"/></g>
+<path d="M200 84 L200 348" stroke="#8a5a0a" stroke-width="2" opacity=".6"/>
+<path d="M118 214 L150 228 L162 270 M282 214 L250 228 L238 270" stroke="#7d5208" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M164 292 L236 292" stroke="#3a2404" stroke-width="5" stroke-linecap="round"/>
+<path d="M146 248 L168 288 M254 248 L232 288" stroke="#7d5208" stroke-width="3" stroke-linecap="round"/>
+<g class="im-eyes" filter="url(#e0gl)"><path d="M126 176 L184 184 L180 200 L134 194 Z" fill="#eafcff"/><path d="M274 176 L216 184 L220 200 L266 194 Z" fill="#eafcff"/></g></g></svg></li><li style="--c1:#e8202a;--i:1"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="e1sm" cx=".42" cy=".3" r=".8"><stop offset="0" stop-color="#ff3b3b"/><stop offset=".55" stop-color="#d4141c"/><stop offset="1" stop-color="#7d070d"/></radialGradient>
+<clipPath id="e1hc"><path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z"/></clipPath></defs>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="url(#e1sm)"/>
+<g clip-path="url(#e1hc)"><path d="M200,215 L200.0,-45.0 M200,215 L288.9,-29.3 M200,215 L367.1,15.8 M200,215 L425.2,85.0 M200,215 L456.1,169.9 M200,215 L456.1,260.1 M200,215 L425.2,345.0 M200,215 L367.1,414.2 M200,215 L288.9,459.3 M200,215 L200.0,475.0 M200,215 L111.1,459.3 M200,215 L32.9,414.2 M200,215 L-25.2,345.0 M200,215 L-56.1,260.1 M200,215 L-56.1,169.9 M200,215 L-25.2,85.0 M200,215 L32.9,15.8 M200,215 L111.1,-29.3 M200.0,181.0 Q205.1,186.2 211.6,183.1 Q214.6,189.7 221.9,189.0 Q222.4,196.2 229.4,198.0 Q227.5,205.0 233.5,209.1 Q229.2,215.0 233.5,220.9 Q227.5,225.0 229.4,232.0 Q222.4,233.8 221.9,241.0 Q214.6,240.3 211.6,246.9 Q205.1,243.8 200.0,249.0 Q194.9,243.8 188.4,246.9 Q185.4,240.3 178.1,241.0 Q177.6,233.8 170.6,232.0 Q172.5,225.0 166.5,220.9 Q170.8,215.0 166.5,209.1 Q172.5,205.0 170.6,198.0 Q177.6,196.2 178.1,189.0 Q185.4,189.7 188.4,183.1 Q194.9,186.2 200.0,181.0 M200.0,147.0 Q210.2,157.4 223.3,151.1 Q229.2,164.4 243.7,162.9 Q244.8,177.4 258.9,181.0 Q255.0,195.0 267.0,203.2 Q258.5,215.0 267.0,226.8 Q255.0,235.0 258.9,249.0 Q244.8,252.6 243.7,267.1 Q229.2,265.6 223.3,278.9 Q210.2,272.6 200.0,283.0 Q189.8,272.6 176.7,278.9 Q170.8,265.6 156.3,267.1 Q155.2,252.6 141.1,249.0 Q145.0,235.0 133.0,226.8 Q141.5,215.0 133.0,203.2 Q145.0,195.0 141.1,181.0 Q155.2,177.4 156.3,162.9 Q170.8,164.4 176.7,151.1 Q189.8,157.4 200.0,147.0 M200.0,111.0 Q215.5,126.9 235.6,117.3 Q244.7,137.5 266.8,135.3 Q268.5,157.5 290.1,163.0 Q284.0,184.4 302.4,196.9 Q289.4,215.0 302.4,233.1 Q284.0,245.6 290.1,267.0 Q268.5,272.5 266.8,294.7 Q244.7,292.5 235.6,312.7 Q215.5,303.1 200.0,319.0 Q184.5,303.1 164.4,312.7 Q155.3,292.5 133.2,294.7 Q131.5,272.5 109.9,267.0 Q116.0,245.6 97.6,233.1 Q110.6,215.0 97.6,196.9 Q116.0,184.4 109.9,163.0 Q131.5,157.5 133.2,135.3 Q155.3,137.5 164.4,117.3 Q184.5,126.9 200.0,111.0 M200.0,73.0 Q221.2,94.7 248.6,81.6 Q261.1,109.2 291.3,106.2 Q293.5,136.5 323.0,144.0 Q314.8,173.2 339.8,190.3 Q322.1,215.0 339.8,239.7 Q314.8,256.8 323.0,286.0 Q293.5,293.5 291.3,323.8 Q261.1,320.8 248.6,348.4 Q221.2,335.3 200.0,357.0 Q178.8,335.3 151.4,348.4 Q138.9,320.8 108.7,323.8 Q106.5,293.5 77.0,286.0 Q85.2,256.8 60.2,239.7 Q77.9,215.0 60.2,190.3 Q85.2,173.2 77.0,144.0 Q106.5,136.5 108.7,106.2 Q138.9,109.2 151.4,81.6 Q178.8,94.7 200.0,73.0 M200.0,31.0 Q227.5,59.2 262.9,42.1 Q279.1,78.0 318.3,74.0 Q321.2,113.3 359.3,123.0 Q348.7,160.9 381.2,183.0 Q358.2,215.0 381.2,247.0 Q348.7,269.1 359.3,307.0 Q321.2,316.7 318.3,356.0 Q279.1,352.0 262.9,387.9 Q227.5,370.8 200.0,399.0 Q172.5,370.8 137.1,387.9 Q120.9,352.0 81.7,356.0 Q78.8,316.7 40.7,307.0 Q51.3,269.1 18.8,247.0 Q41.8,215.0 18.8,183.0 Q51.3,160.9 40.7,123.0 Q78.8,113.3 81.7,74.0 Q120.9,78.0 137.1,42.1 Q172.5,59.2 200.0,31.0" stroke="#2a0306" stroke-width="2.4" fill="none" opacity=".8"/></g>
+<path d="M188 196 C176 150 132 128 96 140 C94 186 124 226 182 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M212 196 C224 150 268 128 304 140 C306 186 276 226 218 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="none" stroke="#3b0207" stroke-width="3"/></svg></li><li style="--c1:#2f6bff;--i:2"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="e2m" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient></defs>
+<circle cx="200" cy="200" r="176" fill="#b0141f"/><circle cx="200" cy="200" r="176" fill="none" stroke="#5c060c" stroke-width="4"/>
+<circle cx="200" cy="200" r="140" fill="#eef1f6"/><circle cx="200" cy="200" r="104" fill="#c8161f"/><circle cx="200" cy="200" r="70" fill="#123a8c"/>
+<polygon points="200.0,138.0 214.6,179.9 259.0,180.8 223.6,207.7 236.4,250.2 200.0,224.8 163.6,250.2 176.4,207.7 141.0,180.8 185.4,179.9" fill="#f6f8fb"/>
+<circle cx="200" cy="200" r="176" fill="url(#e2m)"/></svg></li><li style="--c1:#7cc4ff;--i:3"><svg class="art-svg" viewBox="0 0 400 410" aria-hidden="true">
+<defs><linearGradient id="e3h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e8ef"/><stop offset=".5" stop-color="#9aa4b2"/><stop offset="1" stop-color="#4b5361"/></linearGradient>
+<linearGradient id="e3s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b7584"/><stop offset="1" stop-color="#2e333c"/></linearGradient>
+<pattern id="e3w" width="20" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><rect width="20" height="14" fill="#6b3f22"/><rect width="20" height="3" fill="#3f2312"/></pattern></defs>
+<path d="M186 196 L214 196 L216 346 L184 346 Z" fill="url(#e3w)"/>
+<rect x="178" y="342" width="44" height="22" rx="6" fill="#8a929f"/><circle cx="200" cy="372" r="9" fill="none" stroke="#5a3418" stroke-width="5"/>
+<path d="M200 380 Q186 392 192 398" stroke="#5a3418" stroke-width="5" fill="none"/>
+<path d="M90 70 L310 70 L326 88 L326 186 L310 204 L90 204 L74 186 L74 88 Z" fill="url(#e3h)"/>
+<path d="M74 88 L90 70 L90 204 L74 186 Z" fill="url(#e3s)" opacity=".8"/><path d="M326 88 L310 70 L310 204 L326 186 Z" fill="url(#e3s)"/>
+<rect x="96" y="82" width="208" height="110" rx="4" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+<path d="M150 112 L170 112 L160 150 Z M230 112 L250 112 L240 150 Z" fill="#4b5361" opacity=".5"/>
+<path d="M120 137 L280 137" stroke="#4b5361" stroke-width="3" opacity=".5"/></svg></li><li style="--c1:#7ddc3a;--i:4"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="e4g" cx=".45" cy=".35" r=".8"><stop offset="0" stop-color="#8fd14f"/><stop offset=".55" stop-color="#4c9a24"/><stop offset="1" stop-color="#1f4f0f"/></radialGradient></defs>
+<path d="M200 56 C292 56 338 118 338 198 C338 300 292 368 200 376 C108 368 62 300 62 198 C62 118 108 56 200 56 Z" fill="url(#e4g)"/>
+<path d="M66 180 C56 92 118 30 200 30 C282 30 348 86 334 180 L318 140 L302 162 L288 118 L266 146 L244 108 L222 140 L200 104 L178 140 L156 108 L134 146 L112 118 L98 162 L82 140 Z" fill="#161a12"/>
+<path d="M92 186 L188 214 L190 198 L104 164 Z" fill="#2c5e14"/><path d="M308 186 L212 214 L210 198 L296 164 Z" fill="#2c5e14"/>
+<path d="M112 206 L176 224 L168 240 L120 230 Z" fill="#eafbd6"/><path d="M288 206 L224 224 L232 240 L280 230 Z" fill="#eafbd6"/>
+<circle cx="152" cy="226" r="7" fill="#1d3a0d"/><circle cx="248" cy="226" r="7" fill="#1d3a0d"/>
+<path d="M186 232 L176 280 Q200 292 224 280 L214 232" fill="#3f8a1c"/><path d="M180 278 Q190 286 200 282 Q210 286 220 278" stroke="#1f4f0f" stroke-width="4" fill="none"/>
+<path d="M128 296 Q200 270 272 296 Q268 342 200 348 Q132 342 128 296 Z" fill="#2a0f0a"/>
+<rect x="150" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="167" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="184" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="201" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="218" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="235" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="158" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="175" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="192" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="209" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="226" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/>
+<path d="M120 256 Q110 290 124 310 M280 256 Q290 290 276 310 M168 160 L188 176 M232 160 L212 176" stroke="#2c5e14" stroke-width="5" fill="none" stroke-linecap="round"/></svg></li><li style="--c1:#b85cff;--i:5"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><linearGradient id="e5b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a46"/><stop offset=".5" stop-color="#15151c"/><stop offset="1" stop-color="#050507"/></linearGradient>
+<filter id="e5gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path d="M200 52 L246 62 L286 22 L298 102 C330 142 336 202 326 252 C316 302 272 350 200 366 C128 350 84 302 74 252 C64 202 70 142 102 102 L114 22 L154 62 Z" fill="url(#e5b)" stroke="#9c9cb0" stroke-width="2"/>
+<path d="M200 66 L200 150 M200 150 L120 176 M200 150 L280 176 M200 150 L200 236 M200 236 L170 318 M200 236 L230 318 M120 176 L100 252 L150 326 M280 176 L300 252 L250 326 M154 62 L170 120 L200 150 M246 62 L230 120 L200 150 M150 326 L200 352 L250 326" stroke="#b9b9cc" stroke-width="2.5" fill="none" opacity=".7"/>
+<path class="bp-glow" d="M200 66 L200 150 M200 150 L120 176 M200 150 L280 176 M200 150 L200 236 M200 236 L170 318 M200 236 L230 318 M120 176 L100 252 L150 326 M280 176 L300 252 L250 326 M154 62 L170 120 L200 150 M246 62 L230 120 L200 150 M150 326 L200 352 L250 326" pathLength="1" stroke="#b85cff" stroke-width="4" fill="none" filter="url(#e5gl)"/>
+<path d="M118 192 L182 206 L174 222 L126 214 Z" fill="#f2f2ff"/><path d="M282 192 L218 206 L226 222 L274 214 Z" fill="#f2f2ff"/>
+<path d="M150 290 Q200 306 250 290" stroke="#b9b9cc" stroke-width="3" fill="none"/></svg></li><li style="--c1:#ffb03a;--i:6"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><filter id="e6gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="e6e" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#d4ffcf"/><stop offset=".45" stop-color="#2ee06a"/><stop offset="1" stop-color="#0b5a26"/></radialGradient>
+<linearGradient id="e6gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe7a0"/><stop offset="1" stop-color="#a0700f"/></linearGradient></defs>
+<g filter="url(#e6gl)" stroke="#ffb03a" fill="none">
+<g class="ds-r1"><circle cx="200" cy="200" r="168" stroke-width="5"/><circle cx="200" cy="200" r="148" stroke-width="2"/><line x1="350.0" y1="200.0" x2="362.0" y2="200.0"/><line x1="349.2" y1="215.7" x2="355.1" y2="216.3"/><line x1="346.7" y1="231.2" x2="352.6" y2="232.4"/><line x1="342.7" y1="246.4" x2="348.4" y2="248.2"/><line x1="337.0" y1="261.0" x2="342.5" y2="263.5"/><line x1="329.9" y1="275.0" x2="340.3" y2="281.0"/><line x1="321.4" y1="288.2" x2="326.2" y2="291.7"/><line x1="311.5" y1="300.4" x2="315.9" y2="304.4"/><line x1="300.4" y1="311.5" x2="304.4" y2="315.9"/><line x1="288.2" y1="321.4" x2="291.7" y2="326.2"/><line x1="275.0" y1="329.9" x2="281.0" y2="340.3"/><line x1="261.0" y1="337.0" x2="263.5" y2="342.5"/><line x1="246.4" y1="342.7" x2="248.2" y2="348.4"/><line x1="231.2" y1="346.7" x2="232.4" y2="352.6"/><line x1="215.7" y1="349.2" x2="216.3" y2="355.1"/><line x1="200.0" y1="350.0" x2="200.0" y2="362.0"/><line x1="184.3" y1="349.2" x2="183.7" y2="355.1"/><line x1="168.8" y1="346.7" x2="167.6" y2="352.6"/><line x1="153.6" y1="342.7" x2="151.8" y2="348.4"/><line x1="139.0" y1="337.0" x2="136.5" y2="342.5"/><line x1="125.0" y1="329.9" x2="119.0" y2="340.3"/><line x1="111.8" y1="321.4" x2="108.3" y2="326.2"/><line x1="99.6" y1="311.5" x2="95.6" y2="315.9"/><line x1="88.5" y1="300.4" x2="84.1" y2="304.4"/><line x1="78.6" y1="288.2" x2="73.8" y2="291.7"/><line x1="70.1" y1="275.0" x2="59.7" y2="281.0"/><line x1="63.0" y1="261.0" x2="57.5" y2="263.5"/><line x1="57.3" y1="246.4" x2="51.6" y2="248.2"/><line x1="53.3" y1="231.2" x2="47.4" y2="232.4"/><line x1="50.8" y1="215.7" x2="44.9" y2="216.3"/><line x1="50.0" y1="200.0" x2="38.0" y2="200.0"/><line x1="50.8" y1="184.3" x2="44.9" y2="183.7"/><line x1="53.3" y1="168.8" x2="47.4" y2="167.6"/><line x1="57.3" y1="153.6" x2="51.6" y2="151.8"/><line x1="63.0" y1="139.0" x2="57.5" y2="136.5"/><line x1="70.1" y1="125.0" x2="59.7" y2="119.0"/><line x1="78.6" y1="111.8" x2="73.8" y2="108.3"/><line x1="88.5" y1="99.6" x2="84.1" y2="95.6"/><line x1="99.6" y1="88.5" x2="95.6" y2="84.1"/><line x1="111.8" y1="78.6" x2="108.3" y2="73.8"/><line x1="125.0" y1="70.1" x2="119.0" y2="59.7"/><line x1="139.0" y1="63.0" x2="136.5" y2="57.5"/><line x1="153.6" y1="57.3" x2="151.8" y2="51.6"/><line x1="168.8" y1="53.3" x2="167.6" y2="47.4"/><line x1="184.3" y1="50.8" x2="183.7" y2="44.9"/><line x1="200.0" y1="50.0" x2="200.0" y2="38.0"/><line x1="215.7" y1="50.8" x2="216.3" y2="44.9"/><line x1="231.2" y1="53.3" x2="232.4" y2="47.4"/><line x1="246.4" y1="57.3" x2="248.2" y2="51.6"/><line x1="261.0" y1="63.0" x2="263.5" y2="57.5"/><line x1="275.0" y1="70.1" x2="281.0" y2="59.7"/><line x1="288.2" y1="78.6" x2="291.7" y2="73.8"/><line x1="300.4" y1="88.5" x2="304.4" y2="84.1"/><line x1="311.5" y1="99.6" x2="315.9" y2="95.6"/><line x1="321.4" y1="111.8" x2="326.2" y2="108.3"/><line x1="329.9" y1="125.0" x2="340.3" y2="119.0"/><line x1="337.0" y1="139.0" x2="342.5" y2="136.5"/><line x1="342.7" y1="153.6" x2="348.4" y2="151.8"/><line x1="346.7" y1="168.8" x2="352.6" y2="167.6"/><line x1="349.2" y1="184.3" x2="355.1" y2="183.7"/></g>
+<g class="ds-r2"><rect x="95" y="95" width="210" height="210" stroke-width="3"/><rect x="95" y="95" width="210" height="210" stroke-width="3" transform="rotate(45 200 200)"/></g>
+<g class="ds-r3"><circle cx="200" cy="200" r="118" stroke-width="3" stroke-dasharray="14 8"/><g fill="#ffcf6a" stroke="none"><circle cx="318.0" cy="200.0" r="4"/><circle cx="309.0" cy="245.2" r="4"/><circle cx="283.4" cy="283.4" r="4"/><circle cx="245.2" cy="309.0" r="4"/><circle cx="200.0" cy="318.0" r="4"/><circle cx="154.8" cy="309.0" r="4"/><circle cx="116.6" cy="283.4" r="4"/><circle cx="91.0" cy="245.2" r="4"/><circle cx="82.0" cy="200.0" r="4"/><circle cx="91.0" cy="154.8" r="4"/><circle cx="116.6" cy="116.6" r="4"/><circle cx="154.8" cy="91.0" r="4"/><circle cx="200.0" cy="82.0" r="4"/><circle cx="245.2" cy="91.0" r="4"/><circle cx="283.4" cy="116.6" r="4"/><circle cx="309.0" cy="154.8" r="4"/></g><circle cx="200" cy="200" r="90" stroke-width="2"/></g>
+</g>
+<g class="ds-eye"><path d="M200 152 C238 152 262 176 270 200 C262 224 238 248 200 248 C162 248 138 224 130 200 C138 176 162 152 200 152 Z" fill="url(#e6gd)" stroke="#6b4708" stroke-width="3"/>
+<circle cx="200" cy="200" r="30" fill="url(#e6e)"/><circle cx="192" cy="190" r="8" fill="#fff" opacity=".7"/>
+<path d="M130 200 L112 200 M270 200 L288 200 M200 152 L200 138 M200 248 L200 262" stroke="#d9a33a" stroke-width="5" stroke-linecap="round"/></g></svg></li></ul>
+ <a class="cue" href="#legends"><span>Scroll to begin</span><i aria-hidden="true"></i></a>
+</section>
+
+<section class="hscroll" id="legends" data-h aria-label="Seven legends">
+ <div class="h-stage"><p class="h-eye">Seven legends</p><div class="h-track"><div class="hw" style="--c1:#ff3b30"><b>GENIUS</b><span>01 · Iron Man</span></div><div class="hw out" style="--c1:#e8202a"><b>HERO</b><span>02 · Spider-Man</span></div><div class="hw" style="--c1:#2f6bff"><b>SOLDIER</b><span>03 · Captain America</span></div><div class="hw out" style="--c1:#7cc4ff"><b>GOD</b><span>04 · Thor</span></div><div class="hw" style="--c1:#7ddc3a"><b>MONSTER</b><span>05 · Hulk</span></div><div class="hw out" style="--c1:#b85cff"><b>KING</b><span>06 · Black Panther</span></div><div class="hw" style="--c1:#ffb03a"><b>SORCERER</b><span>07 · Doctor Strange</span></div></div><div class="h-bar"><i></i></div></div>
+</section>
+<section class="manifesto" id="about" data-words aria-label="About this tribute">
+ <p class="mf">Some of us grew up with these heroes on comic pages, Sunday cartoons and the big screen. This page is a small thank you, drawn by hand in code, one scene at a time. Scroll slowly and let each of them make an entrance.</p>
+</section>
+
+<section class="scene s-iron" id="iron" data-scene style="--h:3.4;--c1:#ff3b30;--c2:#f2c14e;--bg1:#2a0507;--bg2:#070203" aria-labelledby="t-iron">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">IRON MAN</div>
+  <div class="fx-wrap"><div class="hud" aria-hidden="true"><svg viewBox="0 0 400 400"><g fill="none" stroke="#ffb22e" stroke-opacity=".55"><circle class="hud-r1" cx="200" cy="200" r="190" stroke-dasharray="4 10" stroke-width="2"/><circle class="hud-r2" cx="200" cy="200" r="168" stroke-dasharray="60 30 10 30" stroke-width="3"/><path d="M200 0 V30 M200 370 V400 M0 200 H30 M370 200 H400" stroke-width="2"/></g></svg>
+<div class="hud-tl">SUIT CHECK<br><b class="hud-n">00</b>%</div><div class="hud-br">FACEPLATE <b class="hud-s">LOCKED</b></div></div>
+<div class="reactor" aria-hidden="true"><svg viewBox="0 0 400 400"><defs><radialGradient id="rec" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#9cf0ff"/><stop offset=".7" stop-color="#22b8e6" stop-opacity=".6"/><stop offset="1" stop-color="#22b8e6" stop-opacity="0"/></radialGradient></defs>
+<circle cx="200" cy="200" r="120" fill="url(#rec)"/><circle cx="200" cy="200" r="70" fill="none" stroke="#5c6670" stroke-width="12"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(0 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(36 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(72 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(108 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(144 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(180 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(216 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(252 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(288 200 200)"/><rect x="196" y="140" width="8" height="26" rx="2" fill="#bff6ff" transform="rotate(324 200 200)"/><circle cx="200" cy="200" r="30" fill="#effdff"/></svg></div>
+<div class="art iron-art"><svg class="art-svg" viewBox="0 0 400 410" aria-hidden="true">
+<defs>
+<linearGradient id="sir" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4a3d"/><stop offset=".45" stop-color="#c3121f"/><stop offset="1" stop-color="#5e060c"/></linearGradient>
+<linearGradient id="sig" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0a8"/><stop offset=".35" stop-color="#f2c14e"/><stop offset=".7" stop-color="#c68a1c"/><stop offset="1" stop-color="#7d5208"/></linearGradient>
+<filter id="sigl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="sifc"><path d="M200 84 L230 70 C268 76 292 108 294 160 L292 232 C287 262 276 288 262 304 L240 338 L200 348 L160 338 L138 304 C124 288 113 262 108 232 L106 160 C108 108 132 76 170 70 Z"/></clipPath>
+</defs>
+<g class="im-shell"><path d="M200 26 C292 26 344 90 344 182 L338 262 C332 304 300 344 258 364 L200 384 L142 364 C100 344 68 304 62 262 L56 182 C56 90 108 26 200 26 Z" fill="url(#sir)"/>
+<path d="M200 26 C150 26 104 52 82 98 C120 70 160 60 200 60 C240 60 280 70 318 98 C296 52 250 26 200 26 Z" fill="#fff" opacity=".18"/>
+<path d="M62 210 L100 222 L104 300 L80 290 Z" fill="#000" opacity=".22"/><path d="M338 210 L300 222 L296 300 L320 290 Z" fill="#000" opacity=".22"/>
+<path d="M200 384 L200 352" stroke="#3d0307" stroke-width="3"/></g>
+<g class="im-face" clip-path="url(#sifc)"><rect x="90" y="60" width="220" height="300" fill="#2a1a12"/>
+<defs><linearGradient id="sifsk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b98f"/><stop offset="1" stop-color="#c98d62"/></linearGradient>
+<radialGradient id="sifch" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e58a74" stop-opacity=".45"/><stop offset="1" stop-color="#e58a74" stop-opacity="0"/></radialGradient></defs>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="url(#sifsk)"/>
+
+<ellipse cx="128" cy="262" rx="30" ry="18" fill="url(#sifch)"/><ellipse cx="272" cy="262" rx="30" ry="18" fill="url(#sifch)"/>
+<path d="M118 178 Q148 164 178 176" stroke="#3a2418" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M222 176 Q252 164 282 178" stroke="#3a2418" stroke-width="9" fill="none" stroke-linecap="round"/>
+<ellipse cx="150" cy="210" rx="21" ry="13" fill="#fff"/><ellipse cx="250" cy="210" rx="21" ry="13" fill="#fff"/>
+<circle cx="152" cy="211" r="10" fill="#5a3a22"/><circle cx="252" cy="211" r="10" fill="#5a3a22"/>
+<circle cx="152" cy="211" r="5" fill="#140c08"/><circle cx="252" cy="211" r="5" fill="#140c08"/>
+<circle cx="155" cy="207" r="2.6" fill="#fff"/><circle cx="255" cy="207" r="2.6" fill="#fff"/>
+<path d="M200 214 L192 262 Q200 270 212 263" stroke="#a8694a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 298 Q200 324 240 298" stroke="#8e3b2e" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M170 300 Q200 316 230 300" fill="#fff" opacity=".9"/></g>
+<g class="im-plate"><g class="im-pl"><path d="M200 84 L170 70 C132 76 108 108 106 160 L108 232 C113 262 124 288 138 304 L160 338 L200 348 Z" fill="url(#sig)"/></g>
+<g class="im-pr"><path d="M200 84 L230 70 C268 76 292 108 294 160 L292 232 C287 262 276 288 262 304 L240 338 L200 348 Z" fill="url(#sig)"/></g>
+<path d="M200 84 L200 348" stroke="#8a5a0a" stroke-width="2" opacity=".6"/>
+<path d="M118 214 L150 228 L162 270 M282 214 L250 228 L238 270" stroke="#7d5208" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M164 292 L236 292" stroke="#3a2404" stroke-width="5" stroke-linecap="round"/>
+<path d="M146 248 L168 288 M254 248 L232 288" stroke="#7d5208" stroke-width="3" stroke-linecap="round"/>
+<g class="im-eyes" filter="url(#sigl)"><path d="M126 176 L184 184 L180 200 L134 194 Z" fill="#eafcff"/><path d="M274 176 L216 184 L220 200 L266 194 Z" fill="#eafcff"/></g></g></svg></div></div>
+  <div class="copy">
+   <p class="idx"><span>01</span> / 07</p>
+   <h2 class="name" id="t-iron" aria-label="Iron Man"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">I</span><span class="l" style="--i:2">r</span><span class="l" style="--i:3">o</span><span class="l" style="--i:4">n</span></span> <span class="w"><span class="l" style="--i:5">M</span><span class="l" style="--i:6">a</span><span class="l" style="--i:7">n</span></span></span></h2>
+   <p class="tag">Genius inventor who built his own armor and chose to fly straight toward trouble.</p>
+   <ul class="chips"><li>Powered armor</li><li>Repulsor tech</li><li>Flight</li></ul>
+   <p class="meta">Tony Stark <i></i> First comic: 1963</p>
+   <p class="rv-hint">Keep scrolling for the reveal</p><p class="spot-hint">Move your cursor over the face</p>
+  </div>
+ </div>
+</section>
+<section class="scene s-spidey" id="spidey" data-scene style="--h:3.4;--c1:#e8202a;--c2:#2f6bff;--bg1:#0b1a4a;--bg2:#04081a" aria-labelledby="t-spidey">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">SPIDER-MAN</div>
+  <div class="fx-wrap"><div class="thread" aria-hidden="true"></div>
+<div class="art spidey-art"><div class="reveal" data-reveal>
+<div class="reveal-face"><svg viewBox="0 0 400 400" aria-hidden="true">
+<defs><linearGradient id="rfsk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9b98f"/><stop offset="1" stop-color="#c98d62"/></linearGradient>
+<radialGradient id="rfch" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e58a74" stop-opacity=".45"/><stop offset="1" stop-color="#e58a74" stop-opacity="0"/></radialGradient></defs>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="url(#rfsk)"/>
+<path d="M70 178 C64 98 118 34 200 34 C282 34 338 98 330 178 C318 132 296 104 262 96 C238 112 206 112 178 100 C150 112 118 120 100 112 C86 130 76 152 70 178 Z" fill="#2b1d16"/>
+<ellipse cx="128" cy="262" rx="30" ry="18" fill="url(#rfch)"/><ellipse cx="272" cy="262" rx="30" ry="18" fill="url(#rfch)"/>
+<path d="M118 178 Q148 164 178 176" stroke="#3a2418" stroke-width="9" fill="none" stroke-linecap="round"/>
+<path d="M222 176 Q252 164 282 178" stroke="#3a2418" stroke-width="9" fill="none" stroke-linecap="round"/>
+<ellipse cx="150" cy="210" rx="21" ry="13" fill="#fff"/><ellipse cx="250" cy="210" rx="21" ry="13" fill="#fff"/>
+<circle cx="152" cy="211" r="10" fill="#5a3a22"/><circle cx="252" cy="211" r="10" fill="#5a3a22"/>
+<circle cx="152" cy="211" r="5" fill="#140c08"/><circle cx="252" cy="211" r="5" fill="#140c08"/>
+<circle cx="155" cy="207" r="2.6" fill="#fff"/><circle cx="255" cy="207" r="2.6" fill="#fff"/>
+<path d="M200 214 L192 262 Q200 270 212 263" stroke="#a8694a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 298 Q200 324 240 298" stroke="#8e3b2e" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M170 300 Q200 316 230 300" fill="#fff" opacity=".9"/></svg></div>
+<div class="reveal-mask"><svg viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="spsm" cx=".42" cy=".3" r=".8"><stop offset="0" stop-color="#ff3b3b"/><stop offset=".55" stop-color="#d4141c"/><stop offset="1" stop-color="#7d070d"/></radialGradient>
+<clipPath id="sphc"><path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z"/></clipPath></defs>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="url(#spsm)"/>
+<g clip-path="url(#sphc)"><path d="M200,215 L200.0,-45.0 M200,215 L288.9,-29.3 M200,215 L367.1,15.8 M200,215 L425.2,85.0 M200,215 L456.1,169.9 M200,215 L456.1,260.1 M200,215 L425.2,345.0 M200,215 L367.1,414.2 M200,215 L288.9,459.3 M200,215 L200.0,475.0 M200,215 L111.1,459.3 M200,215 L32.9,414.2 M200,215 L-25.2,345.0 M200,215 L-56.1,260.1 M200,215 L-56.1,169.9 M200,215 L-25.2,85.0 M200,215 L32.9,15.8 M200,215 L111.1,-29.3 M200.0,181.0 Q205.1,186.2 211.6,183.1 Q214.6,189.7 221.9,189.0 Q222.4,196.2 229.4,198.0 Q227.5,205.0 233.5,209.1 Q229.2,215.0 233.5,220.9 Q227.5,225.0 229.4,232.0 Q222.4,233.8 221.9,241.0 Q214.6,240.3 211.6,246.9 Q205.1,243.8 200.0,249.0 Q194.9,243.8 188.4,246.9 Q185.4,240.3 178.1,241.0 Q177.6,233.8 170.6,232.0 Q172.5,225.0 166.5,220.9 Q170.8,215.0 166.5,209.1 Q172.5,205.0 170.6,198.0 Q177.6,196.2 178.1,189.0 Q185.4,189.7 188.4,183.1 Q194.9,186.2 200.0,181.0 M200.0,147.0 Q210.2,157.4 223.3,151.1 Q229.2,164.4 243.7,162.9 Q244.8,177.4 258.9,181.0 Q255.0,195.0 267.0,203.2 Q258.5,215.0 267.0,226.8 Q255.0,235.0 258.9,249.0 Q244.8,252.6 243.7,267.1 Q229.2,265.6 223.3,278.9 Q210.2,272.6 200.0,283.0 Q189.8,272.6 176.7,278.9 Q170.8,265.6 156.3,267.1 Q155.2,252.6 141.1,249.0 Q145.0,235.0 133.0,226.8 Q141.5,215.0 133.0,203.2 Q145.0,195.0 141.1,181.0 Q155.2,177.4 156.3,162.9 Q170.8,164.4 176.7,151.1 Q189.8,157.4 200.0,147.0 M200.0,111.0 Q215.5,126.9 235.6,117.3 Q244.7,137.5 266.8,135.3 Q268.5,157.5 290.1,163.0 Q284.0,184.4 302.4,196.9 Q289.4,215.0 302.4,233.1 Q284.0,245.6 290.1,267.0 Q268.5,272.5 266.8,294.7 Q244.7,292.5 235.6,312.7 Q215.5,303.1 200.0,319.0 Q184.5,303.1 164.4,312.7 Q155.3,292.5 133.2,294.7 Q131.5,272.5 109.9,267.0 Q116.0,245.6 97.6,233.1 Q110.6,215.0 97.6,196.9 Q116.0,184.4 109.9,163.0 Q131.5,157.5 133.2,135.3 Q155.3,137.5 164.4,117.3 Q184.5,126.9 200.0,111.0 M200.0,73.0 Q221.2,94.7 248.6,81.6 Q261.1,109.2 291.3,106.2 Q293.5,136.5 323.0,144.0 Q314.8,173.2 339.8,190.3 Q322.1,215.0 339.8,239.7 Q314.8,256.8 323.0,286.0 Q293.5,293.5 291.3,323.8 Q261.1,320.8 248.6,348.4 Q221.2,335.3 200.0,357.0 Q178.8,335.3 151.4,348.4 Q138.9,320.8 108.7,323.8 Q106.5,293.5 77.0,286.0 Q85.2,256.8 60.2,239.7 Q77.9,215.0 60.2,190.3 Q85.2,173.2 77.0,144.0 Q106.5,136.5 108.7,106.2 Q138.9,109.2 151.4,81.6 Q178.8,94.7 200.0,73.0 M200.0,31.0 Q227.5,59.2 262.9,42.1 Q279.1,78.0 318.3,74.0 Q321.2,113.3 359.3,123.0 Q348.7,160.9 381.2,183.0 Q358.2,215.0 381.2,247.0 Q348.7,269.1 359.3,307.0 Q321.2,316.7 318.3,356.0 Q279.1,352.0 262.9,387.9 Q227.5,370.8 200.0,399.0 Q172.5,370.8 137.1,387.9 Q120.9,352.0 81.7,356.0 Q78.8,316.7 40.7,307.0 Q51.3,269.1 18.8,247.0 Q41.8,215.0 18.8,183.0 Q51.3,160.9 40.7,123.0 Q78.8,113.3 81.7,74.0 Q120.9,78.0 137.1,42.1 Q172.5,59.2 200.0,31.0" stroke="#2a0306" stroke-width="2.4" fill="none" opacity=".8"/></g>
+<path d="M188 196 C176 150 132 128 96 140 C94 186 124 226 182 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M212 196 C224 150 268 128 304 140 C306 186 276 226 218 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="none" stroke="#3b0207" stroke-width="3"/></svg></div>
+<div class="reveal-spot"><svg viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="sssm" cx=".42" cy=".3" r=".8"><stop offset="0" stop-color="#ff3b3b"/><stop offset=".55" stop-color="#d4141c"/><stop offset="1" stop-color="#7d070d"/></radialGradient>
+<clipPath id="sshc"><path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z"/></clipPath></defs>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="url(#sssm)"/>
+<g clip-path="url(#sshc)"><path d="M200,215 L200.0,-45.0 M200,215 L288.9,-29.3 M200,215 L367.1,15.8 M200,215 L425.2,85.0 M200,215 L456.1,169.9 M200,215 L456.1,260.1 M200,215 L425.2,345.0 M200,215 L367.1,414.2 M200,215 L288.9,459.3 M200,215 L200.0,475.0 M200,215 L111.1,459.3 M200,215 L32.9,414.2 M200,215 L-25.2,345.0 M200,215 L-56.1,260.1 M200,215 L-56.1,169.9 M200,215 L-25.2,85.0 M200,215 L32.9,15.8 M200,215 L111.1,-29.3 M200.0,181.0 Q205.1,186.2 211.6,183.1 Q214.6,189.7 221.9,189.0 Q222.4,196.2 229.4,198.0 Q227.5,205.0 233.5,209.1 Q229.2,215.0 233.5,220.9 Q227.5,225.0 229.4,232.0 Q222.4,233.8 221.9,241.0 Q214.6,240.3 211.6,246.9 Q205.1,243.8 200.0,249.0 Q194.9,243.8 188.4,246.9 Q185.4,240.3 178.1,241.0 Q177.6,233.8 170.6,232.0 Q172.5,225.0 166.5,220.9 Q170.8,215.0 166.5,209.1 Q172.5,205.0 170.6,198.0 Q177.6,196.2 178.1,189.0 Q185.4,189.7 188.4,183.1 Q194.9,186.2 200.0,181.0 M200.0,147.0 Q210.2,157.4 223.3,151.1 Q229.2,164.4 243.7,162.9 Q244.8,177.4 258.9,181.0 Q255.0,195.0 267.0,203.2 Q258.5,215.0 267.0,226.8 Q255.0,235.0 258.9,249.0 Q244.8,252.6 243.7,267.1 Q229.2,265.6 223.3,278.9 Q210.2,272.6 200.0,283.0 Q189.8,272.6 176.7,278.9 Q170.8,265.6 156.3,267.1 Q155.2,252.6 141.1,249.0 Q145.0,235.0 133.0,226.8 Q141.5,215.0 133.0,203.2 Q145.0,195.0 141.1,181.0 Q155.2,177.4 156.3,162.9 Q170.8,164.4 176.7,151.1 Q189.8,157.4 200.0,147.0 M200.0,111.0 Q215.5,126.9 235.6,117.3 Q244.7,137.5 266.8,135.3 Q268.5,157.5 290.1,163.0 Q284.0,184.4 302.4,196.9 Q289.4,215.0 302.4,233.1 Q284.0,245.6 290.1,267.0 Q268.5,272.5 266.8,294.7 Q244.7,292.5 235.6,312.7 Q215.5,303.1 200.0,319.0 Q184.5,303.1 164.4,312.7 Q155.3,292.5 133.2,294.7 Q131.5,272.5 109.9,267.0 Q116.0,245.6 97.6,233.1 Q110.6,215.0 97.6,196.9 Q116.0,184.4 109.9,163.0 Q131.5,157.5 133.2,135.3 Q155.3,137.5 164.4,117.3 Q184.5,126.9 200.0,111.0 M200.0,73.0 Q221.2,94.7 248.6,81.6 Q261.1,109.2 291.3,106.2 Q293.5,136.5 323.0,144.0 Q314.8,173.2 339.8,190.3 Q322.1,215.0 339.8,239.7 Q314.8,256.8 323.0,286.0 Q293.5,293.5 291.3,323.8 Q261.1,320.8 248.6,348.4 Q221.2,335.3 200.0,357.0 Q178.8,335.3 151.4,348.4 Q138.9,320.8 108.7,323.8 Q106.5,293.5 77.0,286.0 Q85.2,256.8 60.2,239.7 Q77.9,215.0 60.2,190.3 Q85.2,173.2 77.0,144.0 Q106.5,136.5 108.7,106.2 Q138.9,109.2 151.4,81.6 Q178.8,94.7 200.0,73.0 M200.0,31.0 Q227.5,59.2 262.9,42.1 Q279.1,78.0 318.3,74.0 Q321.2,113.3 359.3,123.0 Q348.7,160.9 381.2,183.0 Q358.2,215.0 381.2,247.0 Q348.7,269.1 359.3,307.0 Q321.2,316.7 318.3,356.0 Q279.1,352.0 262.9,387.9 Q227.5,370.8 200.0,399.0 Q172.5,370.8 137.1,387.9 Q120.9,352.0 81.7,356.0 Q78.8,316.7 40.7,307.0 Q51.3,269.1 18.8,247.0 Q41.8,215.0 18.8,183.0 Q51.3,160.9 40.7,123.0 Q78.8,113.3 81.7,74.0 Q120.9,78.0 137.1,42.1 Q172.5,59.2 200.0,31.0" stroke="#2a0306" stroke-width="2.4" fill="none" opacity=".8"/></g>
+<path d="M188 196 C176 150 132 128 96 140 C94 186 124 226 182 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M212 196 C224 150 268 128 304 140 C306 186 276 226 218 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="none" stroke="#3b0207" stroke-width="3"/></svg></div><svg class="reveal-roll" viewBox="0 0 400 400" aria-hidden="true"><defs><clipPath id="rollc"><path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z"/></clipPath><linearGradient id="rollg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d070d"/><stop offset=".5" stop-color="#ff4a4a"/><stop offset="1" stop-color="#8a0a10"/></linearGradient></defs><g clip-path="url(#rollc)"><rect class="roll-band" x="0" y="0" width="400" height="24" rx="10" fill="url(#rollg)"/></g></svg></div></div></div>
+  <div class="copy">
+   <p class="idx"><span>02</span> / 07</p>
+   <h2 class="name" id="t-spidey" aria-label="Spider-Man"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">S</span><span class="l" style="--i:2">p</span><span class="l" style="--i:3">i</span><span class="l" style="--i:4">d</span><span class="l" style="--i:5">e</span><span class="l" style="--i:6">r</span><span class="l" style="--i:7">-</span><span class="l" style="--i:8">M</span><span class="l" style="--i:9">a</span><span class="l" style="--i:10">n</span></span></span></h2>
+   <p class="tag">A kid from Queens who swings in, cracks a joke and saves the day before class.</p>
+   <ul class="chips"><li>Wall crawling</li><li>Spider sense</li><li>Web swinging</li></ul>
+   <p class="meta">Peter Parker <i></i> First comic: 1962</p>
+   <p class="rv-hint">Keep scrolling for the reveal</p>
+  </div>
+ </div>
+</section>
+<section class="scene s-cap" id="cap" data-scene style="--h:2.7;--c1:#2f6bff;--c2:#e8202a;--bg1:#0a1d4d;--bg2:#030918" aria-labelledby="t-cap">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">CAPTAIN</div>
+  <div class="fx-wrap"><div class="streak" aria-hidden="true"></div><div class="art cap-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="scm" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient></defs>
+<circle cx="200" cy="200" r="176" fill="#b0141f"/><circle cx="200" cy="200" r="176" fill="none" stroke="#5c060c" stroke-width="4"/>
+<circle cx="200" cy="200" r="140" fill="#eef1f6"/><circle cx="200" cy="200" r="104" fill="#c8161f"/><circle cx="200" cy="200" r="70" fill="#123a8c"/>
+<polygon points="200.0,138.0 214.6,179.9 259.0,180.8 223.6,207.7 236.4,250.2 200.0,224.8 163.6,250.2 176.4,207.7 141.0,180.8 185.4,179.9" fill="#f6f8fb"/>
+<circle cx="200" cy="200" r="176" fill="url(#scm)"/></svg></div></div>
+  <div class="copy">
+   <p class="idx"><span>03</span> / 07</p>
+   <h2 class="name" id="t-cap" aria-label="Captain America"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">C</span><span class="l" style="--i:2">a</span><span class="l" style="--i:3">p</span><span class="l" style="--i:4">t</span><span class="l" style="--i:5">a</span><span class="l" style="--i:6">i</span><span class="l" style="--i:7">n</span></span> <span class="w"><span class="l" style="--i:8">A</span><span class="l" style="--i:9">m</span><span class="l" style="--i:10">e</span><span class="l" style="--i:11">r</span><span class="l" style="--i:12">i</span><span class="l" style="--i:13">c</span><span class="l" style="--i:14">a</span></span></span></h2>
+   <p class="tag">A soldier out of time with a round shield and a heart that never quits.</p>
+   <ul class="chips"><li>Super soldier</li><li>Vibranium shield</li><li>Leader</li></ul>
+   <p class="meta">Steve Rogers <i></i> First comic: 1941</p>
+   
+  </div>
+ </div>
+</section>
+<section class="scene s-thor" id="thor" data-scene style="--h:2.7;--c1:#7cc4ff;--c2:#d9e6f5;--bg1:#16233a;--bg2:#05080f" aria-labelledby="t-thor">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">THOR</div>
+  <div class="fx-wrap"><canvas class="bolt" aria-hidden="true"></canvas><div class="flash" aria-hidden="true"></div><div class="art thor-art"><svg class="art-svg" viewBox="0 0 400 410" aria-hidden="true">
+<defs><linearGradient id="sth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e8ef"/><stop offset=".5" stop-color="#9aa4b2"/><stop offset="1" stop-color="#4b5361"/></linearGradient>
+<linearGradient id="sts" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b7584"/><stop offset="1" stop-color="#2e333c"/></linearGradient>
+<pattern id="stw" width="20" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><rect width="20" height="14" fill="#6b3f22"/><rect width="20" height="3" fill="#3f2312"/></pattern></defs>
+<path d="M186 196 L214 196 L216 346 L184 346 Z" fill="url(#stw)"/>
+<rect x="178" y="342" width="44" height="22" rx="6" fill="#8a929f"/><circle cx="200" cy="372" r="9" fill="none" stroke="#5a3418" stroke-width="5"/>
+<path d="M200 380 Q186 392 192 398" stroke="#5a3418" stroke-width="5" fill="none"/>
+<path d="M90 70 L310 70 L326 88 L326 186 L310 204 L90 204 L74 186 L74 88 Z" fill="url(#sth)"/>
+<path d="M74 88 L90 70 L90 204 L74 186 Z" fill="url(#sts)" opacity=".8"/><path d="M326 88 L310 70 L310 204 L326 186 Z" fill="url(#sts)"/>
+<rect x="96" y="82" width="208" height="110" rx="4" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+<path d="M150 112 L170 112 L160 150 Z M230 112 L250 112 L240 150 Z" fill="#4b5361" opacity=".5"/>
+<path d="M120 137 L280 137" stroke="#4b5361" stroke-width="3" opacity=".5"/></svg></div></div>
+  <div class="copy">
+   <p class="idx"><span>04</span> / 07</p>
+   <h2 class="name" id="t-thor" aria-label="Thor"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">T</span><span class="l" style="--i:2">h</span><span class="l" style="--i:3">o</span><span class="l" style="--i:4">r</span></span></span></h2>
+   <p class="tag">Prince of Asgard who brings the storm wherever he lands.</p>
+   <ul class="chips"><li>Lightning</li><li>Mjolnir</li><li>Asgardian strength</li></ul>
+   <p class="meta">Thor Odinson <i></i> First comic: 1962</p>
+   
+  </div>
+ </div>
+</section>
+<section class="scene s-hulk" id="hulk" data-scene style="--h:2.7;--c1:#7ddc3a;--c2:#8a4fd8;--bg1:#0f2a0a;--bg2:#030802" aria-labelledby="t-hulk">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">SMASH</div>
+  <div class="fx-wrap"><svg class="cracks" viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true"><path d="M200 400 L180 330 L210 280 L170 220 L195 160 M200 400 L260 340 L300 350 L360 290 M200 400 L120 360 L90 300 L30 280 M180 330 L120 320 M210 280 L280 250 L330 200 M170 220 L100 200 L60 140 M195 160 L240 100 L300 60" pathLength="1" stroke="#b6ff7a" stroke-width="2.2" fill="none"/></svg><div class="shock" aria-hidden="true"></div><div class="art hulk-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="shg" cx=".45" cy=".35" r=".8"><stop offset="0" stop-color="#8fd14f"/><stop offset=".55" stop-color="#4c9a24"/><stop offset="1" stop-color="#1f4f0f"/></radialGradient></defs>
+<path d="M200 56 C292 56 338 118 338 198 C338 300 292 368 200 376 C108 368 62 300 62 198 C62 118 108 56 200 56 Z" fill="url(#shg)"/>
+<path d="M66 180 C56 92 118 30 200 30 C282 30 348 86 334 180 L318 140 L302 162 L288 118 L266 146 L244 108 L222 140 L200 104 L178 140 L156 108 L134 146 L112 118 L98 162 L82 140 Z" fill="#161a12"/>
+<path d="M92 186 L188 214 L190 198 L104 164 Z" fill="#2c5e14"/><path d="M308 186 L212 214 L210 198 L296 164 Z" fill="#2c5e14"/>
+<path d="M112 206 L176 224 L168 240 L120 230 Z" fill="#eafbd6"/><path d="M288 206 L224 224 L232 240 L280 230 Z" fill="#eafbd6"/>
+<circle cx="152" cy="226" r="7" fill="#1d3a0d"/><circle cx="248" cy="226" r="7" fill="#1d3a0d"/>
+<path d="M186 232 L176 280 Q200 292 224 280 L214 232" fill="#3f8a1c"/><path d="M180 278 Q190 286 200 282 Q210 286 220 278" stroke="#1f4f0f" stroke-width="4" fill="none"/>
+<path d="M128 296 Q200 270 272 296 Q268 342 200 348 Q132 342 128 296 Z" fill="#2a0f0a"/>
+<rect x="150" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="167" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="184" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="201" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="218" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="235" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="158" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="175" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="192" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="209" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="226" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/>
+<path d="M120 256 Q110 290 124 310 M280 256 Q290 290 276 310 M168 160 L188 176 M232 160 L212 176" stroke="#2c5e14" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div></div>
+  <div class="copy">
+   <p class="idx"><span>05</span> / 07</p>
+   <h2 class="name" id="t-hulk" aria-label="Hulk"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">H</span><span class="l" style="--i:2">u</span><span class="l" style="--i:3">l</span><span class="l" style="--i:4">k</span></span></span></h2>
+   <p class="tag">A brilliant scientist with a very loud, very green other side.</p>
+   <ul class="chips"><li>Super strength</li><li>Thunderclap</li><li>Gets stronger angrier</li></ul>
+   <p class="meta">Bruce Banner <i></i> First comic: 1962</p>
+   
+  </div>
+ </div>
+</section>
+<section class="scene s-panther" id="panther" data-scene style="--h:2.7;--c1:#b85cff;--c2:#c9c9d6;--bg1:#1d0b33;--bg2:#05020a" aria-labelledby="t-panther">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">WAKANDA</div>
+  <div class="fx-wrap"><div class="sparks" aria-hidden="true"><i style=--i:0></i><i style=--i:1></i><i style=--i:2></i><i style=--i:3></i><i style=--i:4></i><i style=--i:5></i><i style=--i:6></i><i style=--i:7></i><i style=--i:8></i><i style=--i:9></i><i style=--i:10></i><i style=--i:11></i><i style=--i:12></i><i style=--i:13></i></div><div class="art panther-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><linearGradient id="sp2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a46"/><stop offset=".5" stop-color="#15151c"/><stop offset="1" stop-color="#050507"/></linearGradient>
+<filter id="sp2gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path d="M200 52 L246 62 L286 22 L298 102 C330 142 336 202 326 252 C316 302 272 350 200 366 C128 350 84 302 74 252 C64 202 70 142 102 102 L114 22 L154 62 Z" fill="url(#sp2b)" stroke="#9c9cb0" stroke-width="2"/>
+<path d="M200 66 L200 150 M200 150 L120 176 M200 150 L280 176 M200 150 L200 236 M200 236 L170 318 M200 236 L230 318 M120 176 L100 252 L150 326 M280 176 L300 252 L250 326 M154 62 L170 120 L200 150 M246 62 L230 120 L200 150 M150 326 L200 352 L250 326" stroke="#b9b9cc" stroke-width="2.5" fill="none" opacity=".7"/>
+<path class="bp-glow" d="M200 66 L200 150 M200 150 L120 176 M200 150 L280 176 M200 150 L200 236 M200 236 L170 318 M200 236 L230 318 M120 176 L100 252 L150 326 M280 176 L300 252 L250 326 M154 62 L170 120 L200 150 M246 62 L230 120 L200 150 M150 326 L200 352 L250 326" pathLength="1" stroke="#b85cff" stroke-width="4" fill="none" filter="url(#sp2gl)"/>
+<path d="M118 192 L182 206 L174 222 L126 214 Z" fill="#f2f2ff"/><path d="M282 192 L218 206 L226 222 L274 214 Z" fill="#f2f2ff"/>
+<path d="M150 290 Q200 306 250 290" stroke="#b9b9cc" stroke-width="3" fill="none"/></svg></div></div>
+  <div class="copy">
+   <p class="idx"><span>06</span> / 07</p>
+   <h2 class="name" id="t-panther" aria-label="Black Panther"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">B</span><span class="l" style="--i:2">l</span><span class="l" style="--i:3">a</span><span class="l" style="--i:4">c</span><span class="l" style="--i:5">k</span></span> <span class="w"><span class="l" style="--i:6">P</span><span class="l" style="--i:7">a</span><span class="l" style="--i:8">n</span><span class="l" style="--i:9">t</span><span class="l" style="--i:10">h</span><span class="l" style="--i:11">e</span><span class="l" style="--i:12">r</span></span></span></h2>
+   <p class="tag">King of Wakanda. Quiet, sharp and dressed in vibranium.</p>
+   <ul class="chips"><li>Vibranium suit</li><li>Kinetic energy</li><li>Wakandan tech</li></ul>
+   <p class="meta">T'Challa <i></i> First comic: 1966</p>
+   
+  </div>
+ </div>
+</section>
+<section class="scene s-strange" id="strange" data-scene style="--h:2.7;--c1:#ffb03a;--c2:#2ee06a;--bg1:#2a1204;--bg2:#080302" aria-labelledby="t-strange">
+ <div class="stage">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="ghost" aria-hidden="true">MYSTIC</div>
+  <div class="fx-wrap"><div class="sparks gold" aria-hidden="true"><i style=--i:0></i><i style=--i:1></i><i style=--i:2></i><i style=--i:3></i><i style=--i:4></i><i style=--i:5></i><i style=--i:6></i><i style=--i:7></i><i style=--i:8></i><i style=--i:9></i><i style=--i:10></i><i style=--i:11></i><i style=--i:12></i><i style=--i:13></i><i style=--i:14></i><i style=--i:15></i><i style=--i:16></i><i style=--i:17></i></div><div class="art strange-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><filter id="sdgl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="sde" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#d4ffcf"/><stop offset=".45" stop-color="#2ee06a"/><stop offset="1" stop-color="#0b5a26"/></radialGradient>
+<linearGradient id="sdgd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe7a0"/><stop offset="1" stop-color="#a0700f"/></linearGradient></defs>
+<g filter="url(#sdgl)" stroke="#ffb03a" fill="none">
+<g class="ds-r1"><circle cx="200" cy="200" r="168" stroke-width="5"/><circle cx="200" cy="200" r="148" stroke-width="2"/><line x1="350.0" y1="200.0" x2="362.0" y2="200.0"/><line x1="349.2" y1="215.7" x2="355.1" y2="216.3"/><line x1="346.7" y1="231.2" x2="352.6" y2="232.4"/><line x1="342.7" y1="246.4" x2="348.4" y2="248.2"/><line x1="337.0" y1="261.0" x2="342.5" y2="263.5"/><line x1="329.9" y1="275.0" x2="340.3" y2="281.0"/><line x1="321.4" y1="288.2" x2="326.2" y2="291.7"/><line x1="311.5" y1="300.4" x2="315.9" y2="304.4"/><line x1="300.4" y1="311.5" x2="304.4" y2="315.9"/><line x1="288.2" y1="321.4" x2="291.7" y2="326.2"/><line x1="275.0" y1="329.9" x2="281.0" y2="340.3"/><line x1="261.0" y1="337.0" x2="263.5" y2="342.5"/><line x1="246.4" y1="342.7" x2="248.2" y2="348.4"/><line x1="231.2" y1="346.7" x2="232.4" y2="352.6"/><line x1="215.7" y1="349.2" x2="216.3" y2="355.1"/><line x1="200.0" y1="350.0" x2="200.0" y2="362.0"/><line x1="184.3" y1="349.2" x2="183.7" y2="355.1"/><line x1="168.8" y1="346.7" x2="167.6" y2="352.6"/><line x1="153.6" y1="342.7" x2="151.8" y2="348.4"/><line x1="139.0" y1="337.0" x2="136.5" y2="342.5"/><line x1="125.0" y1="329.9" x2="119.0" y2="340.3"/><line x1="111.8" y1="321.4" x2="108.3" y2="326.2"/><line x1="99.6" y1="311.5" x2="95.6" y2="315.9"/><line x1="88.5" y1="300.4" x2="84.1" y2="304.4"/><line x1="78.6" y1="288.2" x2="73.8" y2="291.7"/><line x1="70.1" y1="275.0" x2="59.7" y2="281.0"/><line x1="63.0" y1="261.0" x2="57.5" y2="263.5"/><line x1="57.3" y1="246.4" x2="51.6" y2="248.2"/><line x1="53.3" y1="231.2" x2="47.4" y2="232.4"/><line x1="50.8" y1="215.7" x2="44.9" y2="216.3"/><line x1="50.0" y1="200.0" x2="38.0" y2="200.0"/><line x1="50.8" y1="184.3" x2="44.9" y2="183.7"/><line x1="53.3" y1="168.8" x2="47.4" y2="167.6"/><line x1="57.3" y1="153.6" x2="51.6" y2="151.8"/><line x1="63.0" y1="139.0" x2="57.5" y2="136.5"/><line x1="70.1" y1="125.0" x2="59.7" y2="119.0"/><line x1="78.6" y1="111.8" x2="73.8" y2="108.3"/><line x1="88.5" y1="99.6" x2="84.1" y2="95.6"/><line x1="99.6" y1="88.5" x2="95.6" y2="84.1"/><line x1="111.8" y1="78.6" x2="108.3" y2="73.8"/><line x1="125.0" y1="70.1" x2="119.0" y2="59.7"/><line x1="139.0" y1="63.0" x2="136.5" y2="57.5"/><line x1="153.6" y1="57.3" x2="151.8" y2="51.6"/><line x1="168.8" y1="53.3" x2="167.6" y2="47.4"/><line x1="184.3" y1="50.8" x2="183.7" y2="44.9"/><line x1="200.0" y1="50.0" x2="200.0" y2="38.0"/><line x1="215.7" y1="50.8" x2="216.3" y2="44.9"/><line x1="231.2" y1="53.3" x2="232.4" y2="47.4"/><line x1="246.4" y1="57.3" x2="248.2" y2="51.6"/><line x1="261.0" y1="63.0" x2="263.5" y2="57.5"/><line x1="275.0" y1="70.1" x2="281.0" y2="59.7"/><line x1="288.2" y1="78.6" x2="291.7" y2="73.8"/><line x1="300.4" y1="88.5" x2="304.4" y2="84.1"/><line x1="311.5" y1="99.6" x2="315.9" y2="95.6"/><line x1="321.4" y1="111.8" x2="326.2" y2="108.3"/><line x1="329.9" y1="125.0" x2="340.3" y2="119.0"/><line x1="337.0" y1="139.0" x2="342.5" y2="136.5"/><line x1="342.7" y1="153.6" x2="348.4" y2="151.8"/><line x1="346.7" y1="168.8" x2="352.6" y2="167.6"/><line x1="349.2" y1="184.3" x2="355.1" y2="183.7"/></g>
+<g class="ds-r2"><rect x="95" y="95" width="210" height="210" stroke-width="3"/><rect x="95" y="95" width="210" height="210" stroke-width="3" transform="rotate(45 200 200)"/></g>
+<g class="ds-r3"><circle cx="200" cy="200" r="118" stroke-width="3" stroke-dasharray="14 8"/><g fill="#ffcf6a" stroke="none"><circle cx="318.0" cy="200.0" r="4"/><circle cx="309.0" cy="245.2" r="4"/><circle cx="283.4" cy="283.4" r="4"/><circle cx="245.2" cy="309.0" r="4"/><circle cx="200.0" cy="318.0" r="4"/><circle cx="154.8" cy="309.0" r="4"/><circle cx="116.6" cy="283.4" r="4"/><circle cx="91.0" cy="245.2" r="4"/><circle cx="82.0" cy="200.0" r="4"/><circle cx="91.0" cy="154.8" r="4"/><circle cx="116.6" cy="116.6" r="4"/><circle cx="154.8" cy="91.0" r="4"/><circle cx="200.0" cy="82.0" r="4"/><circle cx="245.2" cy="91.0" r="4"/><circle cx="283.4" cy="116.6" r="4"/><circle cx="309.0" cy="154.8" r="4"/></g><circle cx="200" cy="200" r="90" stroke-width="2"/></g>
+</g>
+<g class="ds-eye"><path d="M200 152 C238 152 262 176 270 200 C262 224 238 248 200 248 C162 248 138 224 130 200 C138 176 162 152 200 152 Z" fill="url(#sdgd)" stroke="#6b4708" stroke-width="3"/>
+<circle cx="200" cy="200" r="30" fill="url(#sde)"/><circle cx="192" cy="190" r="8" fill="#fff" opacity=".7"/>
+<path d="M130 200 L112 200 M270 200 L288 200 M200 152 L200 138 M200 248 L200 262" stroke="#d9a33a" stroke-width="5" stroke-linecap="round"/></g></svg></div></div>
+  <div class="copy">
+   <p class="idx"><span>07</span> / 07</p>
+   <h2 class="name" id="t-strange" aria-label="Doctor Strange"><span aria-hidden="true"><span class="w"><span class="l" style="--i:1">D</span><span class="l" style="--i:2">o</span><span class="l" style="--i:3">c</span><span class="l" style="--i:4">t</span><span class="l" style="--i:5">o</span><span class="l" style="--i:6">r</span></span> <span class="w"><span class="l" style="--i:7">S</span><span class="l" style="--i:8">t</span><span class="l" style="--i:9">r</span><span class="l" style="--i:10">a</span><span class="l" style="--i:11">n</span><span class="l" style="--i:12">g</span><span class="l" style="--i:13">e</span></span></span></h2>
+   <p class="tag">A surgeon turned sorcerer who opens doors in thin air.</p>
+   <ul class="chips"><li>Mystic arts</li><li>Portals</li><li>Eye of Agamotto</li></ul>
+   <p class="meta">Stephen Strange <i></i> First comic: 1963</p>
+   
+  </div>
+ </div>
+</section>
+<section class="roster" id="roster" aria-labelledby="roster-t">
+ <p class="pill">The roster</p>
+ <h2 id="roster-t" class="roster-t">Pick your favourite</h2>
+ <p class="roster-sub">Tap a hero to jump back to their scene.</p>
+ <div class="index" aria-label="Hero index"><a class="ix" href="#iron" data-i="0" style="--c1:#ff3b30"><span>01</span><b>Iron Man</b><em>Tony Stark</em></a><a class="ix" href="#spidey" data-i="1" style="--c1:#e8202a"><span>02</span><b>Spider-Man</b><em>Peter Parker</em></a><a class="ix" href="#cap" data-i="2" style="--c1:#2f6bff"><span>03</span><b>Captain America</b><em>Steve Rogers</em></a><a class="ix" href="#thor" data-i="3" style="--c1:#7cc4ff"><span>04</span><b>Thor</b><em>Thor Odinson</em></a><a class="ix" href="#hulk" data-i="4" style="--c1:#7ddc3a"><span>05</span><b>Hulk</b><em>Bruce Banner</em></a><a class="ix" href="#panther" data-i="5" style="--c1:#b85cff"><span>06</span><b>Black Panther</b><em>T'Challa</em></a><a class="ix" href="#strange" data-i="6" style="--c1:#ffb03a"><span>07</span><b>Doctor Strange</b><em>Stephen Strange</em></a></div><div class="ix-prev" aria-hidden="true"></div>
+ <div class="grid"><a class="card" href="#iron" style="--c1:#ff3b30;--c2:#f2c14e;--bg1:#2a0507"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 410" aria-hidden="true">
+<defs>
+<linearGradient id="r0r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4a3d"/><stop offset=".45" stop-color="#c3121f"/><stop offset="1" stop-color="#5e060c"/></linearGradient>
+<linearGradient id="r0g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0a8"/><stop offset=".35" stop-color="#f2c14e"/><stop offset=".7" stop-color="#c68a1c"/><stop offset="1" stop-color="#7d5208"/></linearGradient>
+<filter id="r0gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="r0fc"><path d="M200 84 L230 70 C268 76 292 108 294 160 L292 232 C287 262 276 288 262 304 L240 338 L200 348 L160 338 L138 304 C124 288 113 262 108 232 L106 160 C108 108 132 76 170 70 Z"/></clipPath>
+</defs>
+<g class="im-shell"><path d="M200 26 C292 26 344 90 344 182 L338 262 C332 304 300 344 258 364 L200 384 L142 364 C100 344 68 304 62 262 L56 182 C56 90 108 26 200 26 Z" fill="url(#r0r)"/>
+<path d="M200 26 C150 26 104 52 82 98 C120 70 160 60 200 60 C240 60 280 70 318 98 C296 52 250 26 200 26 Z" fill="#fff" opacity=".18"/>
+<path d="M62 210 L100 222 L104 300 L80 290 Z" fill="#000" opacity=".22"/><path d="M338 210 L300 222 L296 300 L320 290 Z" fill="#000" opacity=".22"/>
+<path d="M200 384 L200 352" stroke="#3d0307" stroke-width="3"/></g>
+
+<g class="im-plate"><g class="im-pl"><path d="M200 84 L170 70 C132 76 108 108 106 160 L108 232 C113 262 124 288 138 304 L160 338 L200 348 Z" fill="url(#r0g)"/></g>
+<g class="im-pr"><path d="M200 84 L230 70 C268 76 292 108 294 160 L292 232 C287 262 276 288 262 304 L240 338 L200 348 Z" fill="url(#r0g)"/></g>
+<path d="M200 84 L200 348" stroke="#8a5a0a" stroke-width="2" opacity=".6"/>
+<path d="M118 214 L150 228 L162 270 M282 214 L250 228 L238 270" stroke="#7d5208" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M164 292 L236 292" stroke="#3a2404" stroke-width="5" stroke-linecap="round"/>
+<path d="M146 248 L168 288 M254 248 L232 288" stroke="#7d5208" stroke-width="3" stroke-linecap="round"/>
+<g class="im-eyes" filter="url(#r0gl)"><path d="M126 176 L184 184 L180 200 L134 194 Z" fill="#eafcff"/><path d="M274 176 L216 184 L220 200 L266 194 Z" fill="#eafcff"/></g></g></svg></div><div class="card-txt"><b>Iron Man</b><span>Tony Stark · 1963</span></div></a><a class="card" href="#spidey" style="--c1:#e8202a;--c2:#2f6bff;--bg1:#0b1a4a"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="r1sm" cx=".42" cy=".3" r=".8"><stop offset="0" stop-color="#ff3b3b"/><stop offset=".55" stop-color="#d4141c"/><stop offset="1" stop-color="#7d070d"/></radialGradient>
+<clipPath id="r1hc"><path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z"/></clipPath></defs>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="url(#r1sm)"/>
+<g clip-path="url(#r1hc)"><path d="M200,215 L200.0,-45.0 M200,215 L288.9,-29.3 M200,215 L367.1,15.8 M200,215 L425.2,85.0 M200,215 L456.1,169.9 M200,215 L456.1,260.1 M200,215 L425.2,345.0 M200,215 L367.1,414.2 M200,215 L288.9,459.3 M200,215 L200.0,475.0 M200,215 L111.1,459.3 M200,215 L32.9,414.2 M200,215 L-25.2,345.0 M200,215 L-56.1,260.1 M200,215 L-56.1,169.9 M200,215 L-25.2,85.0 M200,215 L32.9,15.8 M200,215 L111.1,-29.3 M200.0,181.0 Q205.1,186.2 211.6,183.1 Q214.6,189.7 221.9,189.0 Q222.4,196.2 229.4,198.0 Q227.5,205.0 233.5,209.1 Q229.2,215.0 233.5,220.9 Q227.5,225.0 229.4,232.0 Q222.4,233.8 221.9,241.0 Q214.6,240.3 211.6,246.9 Q205.1,243.8 200.0,249.0 Q194.9,243.8 188.4,246.9 Q185.4,240.3 178.1,241.0 Q177.6,233.8 170.6,232.0 Q172.5,225.0 166.5,220.9 Q170.8,215.0 166.5,209.1 Q172.5,205.0 170.6,198.0 Q177.6,196.2 178.1,189.0 Q185.4,189.7 188.4,183.1 Q194.9,186.2 200.0,181.0 M200.0,147.0 Q210.2,157.4 223.3,151.1 Q229.2,164.4 243.7,162.9 Q244.8,177.4 258.9,181.0 Q255.0,195.0 267.0,203.2 Q258.5,215.0 267.0,226.8 Q255.0,235.0 258.9,249.0 Q244.8,252.6 243.7,267.1 Q229.2,265.6 223.3,278.9 Q210.2,272.6 200.0,283.0 Q189.8,272.6 176.7,278.9 Q170.8,265.6 156.3,267.1 Q155.2,252.6 141.1,249.0 Q145.0,235.0 133.0,226.8 Q141.5,215.0 133.0,203.2 Q145.0,195.0 141.1,181.0 Q155.2,177.4 156.3,162.9 Q170.8,164.4 176.7,151.1 Q189.8,157.4 200.0,147.0 M200.0,111.0 Q215.5,126.9 235.6,117.3 Q244.7,137.5 266.8,135.3 Q268.5,157.5 290.1,163.0 Q284.0,184.4 302.4,196.9 Q289.4,215.0 302.4,233.1 Q284.0,245.6 290.1,267.0 Q268.5,272.5 266.8,294.7 Q244.7,292.5 235.6,312.7 Q215.5,303.1 200.0,319.0 Q184.5,303.1 164.4,312.7 Q155.3,292.5 133.2,294.7 Q131.5,272.5 109.9,267.0 Q116.0,245.6 97.6,233.1 Q110.6,215.0 97.6,196.9 Q116.0,184.4 109.9,163.0 Q131.5,157.5 133.2,135.3 Q155.3,137.5 164.4,117.3 Q184.5,126.9 200.0,111.0 M200.0,73.0 Q221.2,94.7 248.6,81.6 Q261.1,109.2 291.3,106.2 Q293.5,136.5 323.0,144.0 Q314.8,173.2 339.8,190.3 Q322.1,215.0 339.8,239.7 Q314.8,256.8 323.0,286.0 Q293.5,293.5 291.3,323.8 Q261.1,320.8 248.6,348.4 Q221.2,335.3 200.0,357.0 Q178.8,335.3 151.4,348.4 Q138.9,320.8 108.7,323.8 Q106.5,293.5 77.0,286.0 Q85.2,256.8 60.2,239.7 Q77.9,215.0 60.2,190.3 Q85.2,173.2 77.0,144.0 Q106.5,136.5 108.7,106.2 Q138.9,109.2 151.4,81.6 Q178.8,94.7 200.0,73.0 M200.0,31.0 Q227.5,59.2 262.9,42.1 Q279.1,78.0 318.3,74.0 Q321.2,113.3 359.3,123.0 Q348.7,160.9 381.2,183.0 Q358.2,215.0 381.2,247.0 Q348.7,269.1 359.3,307.0 Q321.2,316.7 318.3,356.0 Q279.1,352.0 262.9,387.9 Q227.5,370.8 200.0,399.0 Q172.5,370.8 137.1,387.9 Q120.9,352.0 81.7,356.0 Q78.8,316.7 40.7,307.0 Q51.3,269.1 18.8,247.0 Q41.8,215.0 18.8,183.0 Q51.3,160.9 40.7,123.0 Q78.8,113.3 81.7,74.0 Q120.9,78.0 137.1,42.1 Q172.5,59.2 200.0,31.0" stroke="#2a0306" stroke-width="2.4" fill="none" opacity=".8"/></g>
+<path d="M188 196 C176 150 132 128 96 140 C94 186 124 226 182 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M212 196 C224 150 268 128 304 140 C306 186 276 226 218 224 Z" fill="#f7fbff" stroke="#0d0d0d" stroke-width="10" stroke-linejoin="round"/>
+<path d="M200 38 C287 38 332 108 330 190 C328 272 288 352 200 366 C112 352 72 272 70 190 C68 108 113 38 200 38 Z" fill="none" stroke="#3b0207" stroke-width="3"/></svg></div><div class="card-txt"><b>Spider-Man</b><span>Peter Parker · 1962</span></div></a><a class="card" href="#cap" style="--c1:#2f6bff;--c2:#e8202a;--bg1:#0a1d4d"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="r2m" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient></defs>
+<circle cx="200" cy="200" r="176" fill="#b0141f"/><circle cx="200" cy="200" r="176" fill="none" stroke="#5c060c" stroke-width="4"/>
+<circle cx="200" cy="200" r="140" fill="#eef1f6"/><circle cx="200" cy="200" r="104" fill="#c8161f"/><circle cx="200" cy="200" r="70" fill="#123a8c"/>
+<polygon points="200.0,138.0 214.6,179.9 259.0,180.8 223.6,207.7 236.4,250.2 200.0,224.8 163.6,250.2 176.4,207.7 141.0,180.8 185.4,179.9" fill="#f6f8fb"/>
+<circle cx="200" cy="200" r="176" fill="url(#r2m)"/></svg></div><div class="card-txt"><b>Captain America</b><span>Steve Rogers · 1941</span></div></a><a class="card" href="#thor" style="--c1:#7cc4ff;--c2:#d9e6f5;--bg1:#16233a"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 410" aria-hidden="true">
+<defs><linearGradient id="r3h" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3e8ef"/><stop offset=".5" stop-color="#9aa4b2"/><stop offset="1" stop-color="#4b5361"/></linearGradient>
+<linearGradient id="r3s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b7584"/><stop offset="1" stop-color="#2e333c"/></linearGradient>
+<pattern id="r3w" width="20" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><rect width="20" height="14" fill="#6b3f22"/><rect width="20" height="3" fill="#3f2312"/></pattern></defs>
+<path d="M186 196 L214 196 L216 346 L184 346 Z" fill="url(#r3w)"/>
+<rect x="178" y="342" width="44" height="22" rx="6" fill="#8a929f"/><circle cx="200" cy="372" r="9" fill="none" stroke="#5a3418" stroke-width="5"/>
+<path d="M200 380 Q186 392 192 398" stroke="#5a3418" stroke-width="5" fill="none"/>
+<path d="M90 70 L310 70 L326 88 L326 186 L310 204 L90 204 L74 186 L74 88 Z" fill="url(#r3h)"/>
+<path d="M74 88 L90 70 L90 204 L74 186 Z" fill="url(#r3s)" opacity=".8"/><path d="M326 88 L310 70 L310 204 L326 186 Z" fill="url(#r3s)"/>
+<rect x="96" y="82" width="208" height="110" rx="4" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+<path d="M150 112 L170 112 L160 150 Z M230 112 L250 112 L240 150 Z" fill="#4b5361" opacity=".5"/>
+<path d="M120 137 L280 137" stroke="#4b5361" stroke-width="3" opacity=".5"/></svg></div><div class="card-txt"><b>Thor</b><span>Thor Odinson · 1962</span></div></a><a class="card" href="#hulk" style="--c1:#7ddc3a;--c2:#8a4fd8;--bg1:#0f2a0a"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><radialGradient id="r4g" cx=".45" cy=".35" r=".8"><stop offset="0" stop-color="#8fd14f"/><stop offset=".55" stop-color="#4c9a24"/><stop offset="1" stop-color="#1f4f0f"/></radialGradient></defs>
+<path d="M200 56 C292 56 338 118 338 198 C338 300 292 368 200 376 C108 368 62 300 62 198 C62 118 108 56 200 56 Z" fill="url(#r4g)"/>
+<path d="M66 180 C56 92 118 30 200 30 C282 30 348 86 334 180 L318 140 L302 162 L288 118 L266 146 L244 108 L222 140 L200 104 L178 140 L156 108 L134 146 L112 118 L98 162 L82 140 Z" fill="#161a12"/>
+<path d="M92 186 L188 214 L190 198 L104 164 Z" fill="#2c5e14"/><path d="M308 186 L212 214 L210 198 L296 164 Z" fill="#2c5e14"/>
+<path d="M112 206 L176 224 L168 240 L120 230 Z" fill="#eafbd6"/><path d="M288 206 L224 224 L232 240 L280 230 Z" fill="#eafbd6"/>
+<circle cx="152" cy="226" r="7" fill="#1d3a0d"/><circle cx="248" cy="226" r="7" fill="#1d3a0d"/>
+<path d="M186 232 L176 280 Q200 292 224 280 L214 232" fill="#3f8a1c"/><path d="M180 278 Q190 286 200 282 Q210 286 220 278" stroke="#1f4f0f" stroke-width="4" fill="none"/>
+<path d="M128 296 Q200 270 272 296 Q268 342 200 348 Q132 342 128 296 Z" fill="#2a0f0a"/>
+<rect x="150" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="167" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="184" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="201" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="218" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="235" y="300" width="15" height="14" rx="2" fill="#f4f1de"/><rect x="158" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="175" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="192" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="209" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/><rect x="226" y="318" width="15" height="12" rx="2" fill="#e6e1c4"/>
+<path d="M120 256 Q110 290 124 310 M280 256 Q290 290 276 310 M168 160 L188 176 M232 160 L212 176" stroke="#2c5e14" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><div class="card-txt"><b>Hulk</b><span>Bruce Banner · 1962</span></div></a><a class="card" href="#panther" style="--c1:#b85cff;--c2:#c9c9d6;--bg1:#1d0b33"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><linearGradient id="r5b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a46"/><stop offset=".5" stop-color="#15151c"/><stop offset="1" stop-color="#050507"/></linearGradient>
+<filter id="r5gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path d="M200 52 L246 62 L286 22 L298 102 C330 142 336 202 326 252 C316 302 272 350 200 366 C128 350 84 302 74 252 C64 202 70 142 102 102 L114 22 L154 62 Z" fill="url(#r5b)" stroke="#9c9cb0" stroke-width="2"/>
+<path d="M200 66 L200 150 M200 150 L120 176 M200 150 L280 176 M200 150 L200 236 M200 236 L170 318 M200 236 L230 318 M120 176 L100 252 L150 326 M280 176 L300 252 L250 326 M154 62 L170 120 L200 150 M246 62 L230 120 L200 150 M150 326 L200 352 L250 326" stroke="#b9b9cc" stroke-width="2.5" fill="none" opacity=".7"/>
+<path class="bp-glow" d="M200 66 L200 150 M200 150 L120 176 M200 150 L280 176 M200 150 L200 236 M200 236 L170 318 M200 236 L230 318 M120 176 L100 252 L150 326 M280 176 L300 252 L250 326 M154 62 L170 120 L200 150 M246 62 L230 120 L200 150 M150 326 L200 352 L250 326" pathLength="1" stroke="#b85cff" stroke-width="4" fill="none" filter="url(#r5gl)"/>
+<path d="M118 192 L182 206 L174 222 L126 214 Z" fill="#f2f2ff"/><path d="M282 192 L218 206 L226 222 L274 214 Z" fill="#f2f2ff"/>
+<path d="M150 290 Q200 306 250 290" stroke="#b9b9cc" stroke-width="3" fill="none"/></svg></div><div class="card-txt"><b>Black Panther</b><span>T'Challa · 1966</span></div></a><a class="card" href="#strange" style="--c1:#ffb03a;--c2:#2ee06a;--bg1:#2a1204"><div class="card-art"><svg class="art-svg" viewBox="0 0 400 400" aria-hidden="true">
+<defs><filter id="r6gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="r6e" cx=".5" cy=".45" r=".5"><stop offset="0" stop-color="#d4ffcf"/><stop offset=".45" stop-color="#2ee06a"/><stop offset="1" stop-color="#0b5a26"/></radialGradient>
+<linearGradient id="r6gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe7a0"/><stop offset="1" stop-color="#a0700f"/></linearGradient></defs>
+<g filter="url(#r6gl)" stroke="#ffb03a" fill="none">
+<g class="ds-r1"><circle cx="200" cy="200" r="168" stroke-width="5"/><circle cx="200" cy="200" r="148" stroke-width="2"/><line x1="350.0" y1="200.0" x2="362.0" y2="200.0"/><line x1="349.2" y1="215.7" x2="355.1" y2="216.3"/><line x1="346.7" y1="231.2" x2="352.6" y2="232.4"/><line x1="342.7" y1="246.4" x2="348.4" y2="248.2"/><line x1="337.0" y1="261.0" x2="342.5" y2="263.5"/><line x1="329.9" y1="275.0" x2="340.3" y2="281.0"/><line x1="321.4" y1="288.2" x2="326.2" y2="291.7"/><line x1="311.5" y1="300.4" x2="315.9" y2="304.4"/><line x1="300.4" y1="311.5" x2="304.4" y2="315.9"/><line x1="288.2" y1="321.4" x2="291.7" y2="326.2"/><line x1="275.0" y1="329.9" x2="281.0" y2="340.3"/><line x1="261.0" y1="337.0" x2="263.5" y2="342.5"/><line x1="246.4" y1="342.7" x2="248.2" y2="348.4"/><line x1="231.2" y1="346.7" x2="232.4" y2="352.6"/><line x1="215.7" y1="349.2" x2="216.3" y2="355.1"/><line x1="200.0" y1="350.0" x2="200.0" y2="362.0"/><line x1="184.3" y1="349.2" x2="183.7" y2="355.1"/><line x1="168.8" y1="346.7" x2="167.6" y2="352.6"/><line x1="153.6" y1="342.7" x2="151.8" y2="348.4"/><line x1="139.0" y1="337.0" x2="136.5" y2="342.5"/><line x1="125.0" y1="329.9" x2="119.0" y2="340.3"/><line x1="111.8" y1="321.4" x2="108.3" y2="326.2"/><line x1="99.6" y1="311.5" x2="95.6" y2="315.9"/><line x1="88.5" y1="300.4" x2="84.1" y2="304.4"/><line x1="78.6" y1="288.2" x2="73.8" y2="291.7"/><line x1="70.1" y1="275.0" x2="59.7" y2="281.0"/><line x1="63.0" y1="261.0" x2="57.5" y2="263.5"/><line x1="57.3" y1="246.4" x2="51.6" y2="248.2"/><line x1="53.3" y1="231.2" x2="47.4" y2="232.4"/><line x1="50.8" y1="215.7" x2="44.9" y2="216.3"/><line x1="50.0" y1="200.0" x2="38.0" y2="200.0"/><line x1="50.8" y1="184.3" x2="44.9" y2="183.7"/><line x1="53.3" y1="168.8" x2="47.4" y2="167.6"/><line x1="57.3" y1="153.6" x2="51.6" y2="151.8"/><line x1="63.0" y1="139.0" x2="57.5" y2="136.5"/><line x1="70.1" y1="125.0" x2="59.7" y2="119.0"/><line x1="78.6" y1="111.8" x2="73.8" y2="108.3"/><line x1="88.5" y1="99.6" x2="84.1" y2="95.6"/><line x1="99.6" y1="88.5" x2="95.6" y2="84.1"/><line x1="111.8" y1="78.6" x2="108.3" y2="73.8"/><line x1="125.0" y1="70.1" x2="119.0" y2="59.7"/><line x1="139.0" y1="63.0" x2="136.5" y2="57.5"/><line x1="153.6" y1="57.3" x2="151.8" y2="51.6"/><line x1="168.8" y1="53.3" x2="167.6" y2="47.4"/><line x1="184.3" y1="50.8" x2="183.7" y2="44.9"/><line x1="200.0" y1="50.0" x2="200.0" y2="38.0"/><line x1="215.7" y1="50.8" x2="216.3" y2="44.9"/><line x1="231.2" y1="53.3" x2="232.4" y2="47.4"/><line x1="246.4" y1="57.3" x2="248.2" y2="51.6"/><line x1="261.0" y1="63.0" x2="263.5" y2="57.5"/><line x1="275.0" y1="70.1" x2="281.0" y2="59.7"/><line x1="288.2" y1="78.6" x2="291.7" y2="73.8"/><line x1="300.4" y1="88.5" x2="304.4" y2="84.1"/><line x1="311.5" y1="99.6" x2="315.9" y2="95.6"/><line x1="321.4" y1="111.8" x2="326.2" y2="108.3"/><line x1="329.9" y1="125.0" x2="340.3" y2="119.0"/><line x1="337.0" y1="139.0" x2="342.5" y2="136.5"/><line x1="342.7" y1="153.6" x2="348.4" y2="151.8"/><line x1="346.7" y1="168.8" x2="352.6" y2="167.6"/><line x1="349.2" y1="184.3" x2="355.1" y2="183.7"/></g>
+<g class="ds-r2"><rect x="95" y="95" width="210" height="210" stroke-width="3"/><rect x="95" y="95" width="210" height="210" stroke-width="3" transform="rotate(45 200 200)"/></g>
+<g class="ds-r3"><circle cx="200" cy="200" r="118" stroke-width="3" stroke-dasharray="14 8"/><g fill="#ffcf6a" stroke="none"><circle cx="318.0" cy="200.0" r="4"/><circle cx="309.0" cy="245.2" r="4"/><circle cx="283.4" cy="283.4" r="4"/><circle cx="245.2" cy="309.0" r="4"/><circle cx="200.0" cy="318.0" r="4"/><circle cx="154.8" cy="309.0" r="4"/><circle cx="116.6" cy="283.4" r="4"/><circle cx="91.0" cy="245.2" r="4"/><circle cx="82.0" cy="200.0" r="4"/><circle cx="91.0" cy="154.8" r="4"/><circle cx="116.6" cy="116.6" r="4"/><circle cx="154.8" cy="91.0" r="4"/><circle cx="200.0" cy="82.0" r="4"/><circle cx="245.2" cy="91.0" r="4"/><circle cx="283.4" cy="116.6" r="4"/><circle cx="309.0" cy="154.8" r="4"/></g><circle cx="200" cy="200" r="90" stroke-width="2"/></g>
+</g>
+<g class="ds-eye"><path d="M200 152 C238 152 262 176 270 200 C262 224 238 248 200 248 C162 248 138 224 130 200 C138 176 162 152 200 152 Z" fill="url(#r6gd)" stroke="#6b4708" stroke-width="3"/>
+<circle cx="200" cy="200" r="30" fill="url(#r6e)"/><circle cx="192" cy="190" r="8" fill="#fff" opacity=".7"/>
+<path d="M130 200 L112 200 M270 200 L288 200 M200 152 L200 138 M200 248 L200 262" stroke="#d9a33a" stroke-width="5" stroke-linecap="round"/></g></svg></div><div class="card-txt"><b>Doctor Strange</b><span>Stephen Strange · 1963</span></div></a>
+  <div class="card card-more"><b>And many more</b><span>Wanda, Natasha, Groot, Rocket and the rest of the team are waiting for the next chapter.</span></div>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <p class="foot-big">Thanks for scrolling.</p>
+ <p>Fan-made tribute demo. Not affiliated with or endorsed by Marvel or Disney. All characters belong to their owners.</p>
+ <p>All artwork on this page is original fan art drawn in code.</p>
+ <p class="foot-by">Website by <a href="https://mohammadgulab.github.io/">Mohammad Gulab</a></p>
+</footer>
+<script src="main.js?v=2" defer></script>
+</body>
+</html>
